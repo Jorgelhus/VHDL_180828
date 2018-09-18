@@ -1,12 +1,8 @@
---Este arquivo converte os dados numericos em saida para o display, de forma a acender as areas definidas.
-
 entity conv_7seg is
 port (
 	signal en : in bit;
 	signal dado : in bit_vector (3 downto 0);
---entra o enable, que garante energia para o display, e o dado, que contem o valor numerico.
 	signal display : out bit_vector (6 downto 0)
---sai o display, que e o valor de cada ponto do display de sete seguimentos a ser acendido.
 );
 end entity conv_7seg;
 
@@ -18,7 +14,6 @@ begin
 
 display <= aux when en='1' else
 				"1111111";
---o display tem todos os valores em 1, ou seja, fica desligado, quando o enable chega 1.
 
 with dado select
 	  aux <= "1000000" when "0000",

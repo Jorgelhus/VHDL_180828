@@ -1,8 +1,14 @@
+--Para esta operaçao e necessario a existencia de dois clocks extras, chamados pisca1 e pisca2
+--Estes clocks tem intervalo de operaçao de valor 2 e 4, de forma a gerar os pisca exigidos.
 entity gerador_clock_duplo is
 port (
 	signal clock_in : in bit;
+--entrada do clock inicial, que e determinado pelo usuario/pela fpga
+	
 	signal clock_out1 : out bit; --Pisca1
 	signal clock_out2 : out bit --Pisca2
+--saida dos clocks de pisca
+	
 );
 end entity gerador_clock_duplo;
 
@@ -25,6 +31,7 @@ begin
 	
 		if contador1<1 then
 			contador1:=contador1+1;
+--clock em 2
 		else
 			contador1:=0;
 			clk1<=not clk1;
@@ -32,6 +39,7 @@ begin
 		
 		if contador2<3 then
 			contador2:=contador2+1;
+--clock em 4
 		else
 			contador2:=0;
 			clk2<=not clk2;
