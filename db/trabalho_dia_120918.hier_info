@@ -1,0 +1,15 @@
+|maq_primos
+pwm1 => est_aux[0].CLK
+pwm1 => est_aux[1].CLK
+pwm1 => est_aux[2].CLK
+pwm1 => est_aux[3].CLK
+control => est_aux~0.OUTPUTSELECT
+control => est_aux~1.OUTPUTSELECT
+control => est_aux~2.OUTPUTSELECT
+control => est_aux~3.OUTPUTSELECT
+estado[0] <= est_aux[0].DB_MAX_OUTPUT_PORT_TYPE
+estado[1] <= est_aux[1].DB_MAX_OUTPUT_PORT_TYPE
+estado[2] <= est_aux[2].DB_MAX_OUTPUT_PORT_TYPE
+estado[3] <= est_aux[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
