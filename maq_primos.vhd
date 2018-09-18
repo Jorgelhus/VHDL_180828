@@ -4,7 +4,7 @@
 entity maq_primos is
 port (
 	signal pwm1 : in bit;
---entrada do clock inicial, que e determinado pelo usuario/pela fpga
+--entrada do clock gerado internamente, e determinado pelo gerador interno.
 
 	signal control : in bit;
 --entrada do clock de controle, que e determinado pelo usuario/pela fpga
