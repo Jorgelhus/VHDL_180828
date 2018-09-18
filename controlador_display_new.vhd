@@ -82,7 +82,7 @@ en0 <=   '0' when tipo0="00" else
 
 		
 		
-controlador: process (clock)
+controlador: process (pwm2)
 
 variable vnum7, vnum6, vnum5, vnum4, vnum3, vnum2, vnum1, vnum0 : bit_vector (3 downto 0) := "0000";
 
@@ -91,7 +91,7 @@ variable vtipo7, vtipo6, vtipo5, vtipo4, vtipo3, vtipo2, vtipo1, vtipo0 : bit_ve
 begin
 
 --processo de "empurrar" o numero para o display da frente.
-if clock='0' and clock'event then
+if pwm2='0' and pwm2'event then
 
 vnum0 := vnum1;
 vnum1 := vnum2;
@@ -100,7 +100,7 @@ vnum3 := vnum4;
 vnum4 := vnum5;
 vnum5 := vnum6;
 vnum6 := vnum7;
-vnum7 := num;
+vnum7 := estado;
 
 vtipo0 := vtipo1;
 vtipo1 := vtipo2;

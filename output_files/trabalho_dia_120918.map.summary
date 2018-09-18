@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Sep 14 18:06:44 2018
+Analysis & Synthesis Status : Successful - Tue Sep 18 02:07:15 2018
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
 Revision Name : trabalho_dia_120918
-Top-level Entity Name : maq_primos
+Top-level Entity Name : trabalho_dia_120918
 Family : Cyclone II
-Total logic elements : 8
-    Total combinational functions : 8
-    Dedicated logic registers : 4
-Total registers : 4
-Total pins : 6
+Total logic elements : 193
+    Total combinational functions : 145
+    Dedicated logic registers : 64
+Total registers : 64
+Total pins : 58
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

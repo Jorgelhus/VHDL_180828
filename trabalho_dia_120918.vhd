@@ -58,7 +58,7 @@ signal tipo : in bit_vector(1 downto 0);
 signal num7, num6, num5, num4, num3, num2, num1, num0 : out bit_vector (3 downto 0);
 signal en7, en6, en5, en4, en3, en2, en1, en0 : out bit
 );
-end component controlador_display;
+end component controlador_display_new;
 
 --XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -79,7 +79,7 @@ signal clock_out1 : bit; --uma das saidas do gerador de clock duplo
 signal clock_out2 : bit; --outra saida do gerador de clock duplo
 signal pwm1, pwm2, pwm3 : bit; --saidas do gerador de pwm 
 signal estado : bit_vector (3 downto 0); --numero que sai da maquina de primos
-signal tipo : bit_vector (1 downto 0) --tipo do numero que sai da maquina de primos
+signal tipo : bit_vector (1 downto 0); --tipo do numero que sai da maquina de primos
 signal num7, num6, num5, num4, num3, num2, num1, num0 : bit_vector (3 downto 0); --Numeros enviados para cada display, pelo controlador de displays
 signal en7, en6, en5, en4, en3, en2, en1, en0 : bit; -- Os clocks de cada display
 signal pisca1 : bit;
@@ -99,7 +99,7 @@ xmaq_primos: maq_primos port map (pwm1, control, estado, tipo);
 --na maquina de primos entra o clock do pwm, o controle que determina se sao primos ou nao
 --e sai o estado, que e o numero em si, e o seu tipo, que determina seu "pisca"
 
-xcontrolador_display: controlador_display port map (pwm2, clock_out1, clock_out2, estado, tipo,
+xcontrolador_display_new: controlador_display_new port map (pwm2, clock_out1, clock_out2, estado, tipo,
 	 num7, num6, num5, num4, num3, num2, num1, num0,
 	 en7, en6, en5, en4, en3, en2, en1, en0);
 --no controlador do display, entram o pwm2, que e o clock atrasado, o estado, que e o numero gerado pela maquina de primos e os

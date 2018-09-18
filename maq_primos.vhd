@@ -72,7 +72,6 @@ begin
 
       end if;		
 
---borda de subida
 		if control = '1' then 
 		case est_aux is
 			when "0000" => est_aux<="0001";
