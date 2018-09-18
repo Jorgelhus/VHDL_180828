@@ -50,7 +50,6 @@ set_global_assignment -name VHDL_FILE trabalho_dia_120918.vhd
 set_global_assignment -name VHDL_FILE gerador_clock_duplo.vhd
 set_global_assignment -name VHDL_FILE gerador_pwm.vhd
 set_global_assignment -name VHDL_FILE maq_primos.vhd
-set_global_assignment -name VHDL_FILE controlador_display.vhd
 set_global_assignment -name VHDL_FILE conv_7seg.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
